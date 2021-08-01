@@ -1,0 +1,106 @@
+*{
+padding: 0;
+margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    
+}
+
+.container{
+    background-color:#14bdac;
+    border-radius: 25px;
+    margin-top: 25px;
+    
+}
+
+.container span{
+    color: white;
+}
+
+.title{
+    text-align: center;
+}
+.creator{
+    text-align: center;
+}
+.status-action{
+    margin-top: 25px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reset{
+    cursor: pointer;
+}
+
+.reset:hover{
+    color: white;
+}
+
+.game-grid{
+    display: grid;
+    margin: 50px 50px 50px 50px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    background-color: #0da192;
+    grid-gap: 15px;
+}
+
+.game-cell{
+    background-color:#14bdac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+.game-cell:hover{
+    transform: scale(1.2);
+    background-color:lightgreen;
+    box-shadow: 5px 10px 8px #888888;
+    z-index: 2;
+}
+
+.x::after{
+    content: '×';
+    font-size: 100px;
+    color: brown;
+
+}
+
+.o::after{
+    content: '○';
+    font-size: 100px;
+    color: white;
+
+}
+
+.winning-message{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 50px;
+}
+
+.winning-message.show{
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-button:hover{
+     background-color: black;
+     color: white;
+}
